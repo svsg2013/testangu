@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="libs/angular.min.js"></script>
+        <script language="javascript" src="js/myscript.js"></script>
+	<title>Test Angu</title>
+</head>
+<body>
+        <div ng-app="myapp">
+            <div ng-controller="HeaderController">
+                <h2>Xin chào <strong>{{data.title}}</strong> đến với website <i>{{data.summary}}</i>!</h2>
+            </div>
+			<div ng-controller="ContentController">
+				<h3>Xin chào {{data.name}} khỏe không {{data.ket}}?
+			</div>
+			<div ng-controller="InfoController">
+			<p>
+                Chủ sở hữu: {{abc.fullname}} <br/>
+                Email: {{abc.email}} <br/>
+                Điện Thoại: {{abc.phone}} <br/>
+                Chủ Đề: {{abc.topic}} <br/>
+                Website: {{abc.website}}
+            </p>
+			</div>
+			<hr />
+			<div ng-controller="TestController">
+				 Nhập tên của bạn:
+            <input type="text" placeholder="Nhập tên vào đây" ng-model='txtUser'>
+            <button ng-click='test()'>In thông báo</button>
+            <hr>
+            {{greeting}}
+			</div>
+			<hr />
+			<div ng-controller="ParentController">
+				<div ng-controller="OneController">
+					Xin chào {{name}}
+				</div>
+				<div ng-controller="TwoController">
+					Xin chào {{name}}
+				</div>
+				{{name}}
+			</div>
+        </div>
+</body>
+</html>
