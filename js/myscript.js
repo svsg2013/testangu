@@ -29,4 +29,6 @@ angular.module("myapp",[]).controller('HeaderController', ['$scope', function ($
 }]).controller('TwoController', ['$scope', function ($scope) {
 	$scope.name= 'Bột lọc';
 	
+}]).controller('MyController', ['$scope', function ($scope) {
+	$scope.txtName= '';
 }])
